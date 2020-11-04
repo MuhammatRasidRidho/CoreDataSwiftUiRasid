@@ -14,6 +14,11 @@
 		411446F025518ED400744EBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 411446EF25518ED400744EBC /* Assets.xcassets */; };
 		411446F325518ED400744EBC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 411446F225518ED400744EBC /* Preview Assets.xcassets */; };
 		411446F625518ED400744EBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 411446F425518ED400744EBC /* LaunchScreen.storyboard */; };
+		41DE6A7B255191F500D18F36 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DE6A7A255191F500D18F36 /* CoreDataManager.swift */; };
+		41DE6A802551931A00D18F36 /* NSManagedObjectContext+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DE6A7F2551931A00D18F36 /* NSManagedObjectContext+Extentions.swift */; };
+		41DE6A842551946200D18F36 /* AddOrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DE6A832551946200D18F36 /* AddOrderViewModel.swift */; };
+		41DE6A88255194E100D18F36 /* AddOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DE6A87255194E100D18F36 /* AddOrderView.swift */; };
+		41DE6A8C2551A1FA00D18F36 /* OrderListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DE6A8B2551A1FA00D18F36 /* OrderListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		411446F225518ED400744EBC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		411446F525518ED400744EBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		411446F725518ED400744EBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41DE6A7A255191F500D18F36 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		41DE6A7F2551931A00D18F36 /* NSManagedObjectContext+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Extentions.swift"; sourceTree = "<group>"; };
+		41DE6A832551946200D18F36 /* AddOrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderViewModel.swift; sourceTree = "<group>"; };
+		41DE6A87255194E100D18F36 /* AddOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderView.swift; sourceTree = "<group>"; };
+		41DE6A8B2551A1FA00D18F36 /* OrderListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +68,12 @@
 		411446E525518ED400744EBC /* CoreDataRasid */ = {
 			isa = PBXGroup;
 			children = (
+				41DE6A86255194BA00D18F36 /* Views */,
+				41DE6A822551943500D18F36 /* View Models */,
+				41DE6A7E255192D200D18F36 /* Extensions */,
+				41DE6A79255191B700D18F36 /* Managers */,
 				411446E625518ED400744EBC /* AppDelegate.swift */,
 				411446E825518ED400744EBC /* SceneDelegate.swift */,
-				411446EA25518ED400744EBC /* ContentView.swift */,
 				411446EF25518ED400744EBC /* Assets.xcassets */,
 				411446F425518ED400744EBC /* LaunchScreen.storyboard */,
 				411446F725518ED400744EBC /* Info.plist */,
@@ -76,6 +89,40 @@
 				411446F225518ED400744EBC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		41DE6A79255191B700D18F36 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				41DE6A7A255191F500D18F36 /* CoreDataManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		41DE6A7E255192D200D18F36 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				41DE6A7F2551931A00D18F36 /* NSManagedObjectContext+Extentions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		41DE6A822551943500D18F36 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				41DE6A832551946200D18F36 /* AddOrderViewModel.swift */,
+				41DE6A8B2551A1FA00D18F36 /* OrderListViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		41DE6A86255194BA00D18F36 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				411446EA25518ED400744EBC /* ContentView.swift */,
+				41DE6A87255194E100D18F36 /* AddOrderView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,9 +195,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41DE6A802551931A00D18F36 /* NSManagedObjectContext+Extentions.swift in Sources */,
 				411446EE25518ED400744EBC /* CoreDataRasid.xcdatamodeld in Sources */,
 				411446E725518ED400744EBC /* AppDelegate.swift in Sources */,
+				41DE6A8C2551A1FA00D18F36 /* OrderListViewModel.swift in Sources */,
 				411446E925518ED400744EBC /* SceneDelegate.swift in Sources */,
+				41DE6A7B255191F500D18F36 /* CoreDataManager.swift in Sources */,
+				41DE6A88255194E100D18F36 /* AddOrderView.swift in Sources */,
+				41DE6A842551946200D18F36 /* AddOrderViewModel.swift in Sources */,
 				411446EB25518ED400744EBC /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
